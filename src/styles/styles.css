@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  background: #fff;
+}
+
+
+.navbar a {
+  text-decoration: none;
+  margin: 0 0.5rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+
+.navbar .active-link {
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+form input {
+  padding: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+form button {
+  padding: 0.3rem 0.6rem;
+}
+
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+li span {
+  margin-left: 0.5rem;
+  flex: 1;
+}
+
+.api-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.api-container ul {
+  padding-left: 0;
+}
+
+.api-container li {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.api-container li strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.api-container li p {
+  margin: 0;
+  line-height: 1.4;
+}

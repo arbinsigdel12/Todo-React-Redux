@@ -8,14 +8,12 @@ export default function App() {
       <nav className="navbar">
         <NavLink
           to="/todos"
-          className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           Todos
         </NavLink>
         {"      "}
         <NavLink
           to="/api"
-          className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           API Data
         </NavLink>

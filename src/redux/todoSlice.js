@@ -17,7 +17,10 @@ const todoSlice = createSlice({
     },
     toggleTodo: (state, action) => {
       const todo = state.find((t) => t.id === action.payload);
-      if (todo) todo.completed = !todo.completed;
+      if (todo!=null)
+      {
+        todo.completed = !todo.completed;
+      }
     },
     deleteTodo: (state, action) => {
       return state.filter((t) => t.id !== action.payload);
@@ -25,7 +28,10 @@ const todoSlice = createSlice({
     editTodo: (state, action) => {
       const { id, text } = action.payload;
       const todo = state.find((t) => t.id === id);
-      if (todo) todo.text = text;
+      if (todo!=null) {
+        todo.text = text;
+      }
+        
     },
   },
 });

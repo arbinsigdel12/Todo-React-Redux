@@ -10,7 +10,9 @@ export default function TodoPage() {
   const [editing, setEditing] = useState({ id: null, text: "" });
 
   const handleSubmit = (e) => {
+    //avoiding default reload of form
     e.preventDefault();
+    // if empty
     if (input.trim()) {
       dispatch(addTodo(input));
       setInput("");
@@ -19,7 +21,9 @@ export default function TodoPage() {
 
   const handleSave = () => {
     if (editing.text.trim()) {
+      // apply editTodo function from redux operation
       dispatch(editTodo({ id: editing.id, text: editing.text }));
+      // stop editing
       setEditing({ id: null, text: "" });
     }
   };
@@ -45,11 +49,12 @@ export default function TodoPage() {
               checked={todo.completed}
               onChange={() => dispatch(toggleTodo(todo.id))}
             />
-
+            {/* if else to check if edit is clicked or not */}
             {editing.id === todo.id ? (
               <>
                 <input
                   value={editing.text}
+                  // save all value except text and change text
                   onChange={(e) => setEditing({ ...editing, text: e.target.value })}
                 />
                 <button onClick={handleSave}>Save</button>
@@ -57,6 +62,7 @@ export default function TodoPage() {
               </>
             ) : (
               <>
+                {/* class to apply line through */}
                 <span className={todo.completed ? "completed" : ""}>
                   {todo.text}
                 </span>

@@ -35,8 +35,8 @@ export default function TodoPage() {
       <form onSubmit={handleSubmit}>
         <input
           value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Add a new todo"
+          onChange={(e)=>setInput(e.target.value)}
+          placeholder="Add a new todo task"
         />
         <button>Add</button>
       </form>
@@ -51,7 +51,7 @@ export default function TodoPage() {
             />
 
             {/* if else to check if edit is clicked or not */}
-            {editing.id === todo.id ? (
+            {editing.id == todo.id ? (
               <>
                 <input
                   value={editing.text}

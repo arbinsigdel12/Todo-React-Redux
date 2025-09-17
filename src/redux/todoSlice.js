@@ -8,6 +8,8 @@ const todoSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
+
+
     addTodo: (state, action) => {
       state.push({
         id: Date.now(),
@@ -15,6 +17,8 @@ const todoSlice = createSlice({
         completed: false,
       });
     },
+
+
     toggleTodo: (state, action) => {
       const todo = state.find((t) => t.id == action.payload);
       if (todo!=null)
@@ -22,9 +26,13 @@ const todoSlice = createSlice({
         todo.completed = !todo.completed;
       }
     },
+
+
     deleteTodo: (state, action) => {
       return state.filter((t) => t.id !== action.payload);
     },
+
+    
     editTodo: (state, action) => {
       const { id, text } = action.payload;
       const todo = state.find((t) => t.id === id);

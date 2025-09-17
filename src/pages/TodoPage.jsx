@@ -49,6 +49,7 @@ export default function TodoPage() {
               checked={todo.completed}
               onChange={() => dispatch(toggleTodo(todo.id))}
             />
+
             {/* if else to check if edit is clicked or not */}
             {editing.id === todo.id ? (
               <>
@@ -60,7 +61,9 @@ export default function TodoPage() {
                 <button onClick={handleSave}>Save</button>
                 <button onClick={() => setEditing({ id: null, text: "" })}>Cancel</button>
               </>
-            ) : (
+            )       
+            : 
+            (
               <>
                 {/* class to apply line through */}
                 <span className={todo.completed ? "completed" : ""}>
@@ -73,7 +76,9 @@ export default function TodoPage() {
                   Delete
                 </button>
               </>
-            )}
+            )   
+
+          }
           </li>
         ))}
       </ul>

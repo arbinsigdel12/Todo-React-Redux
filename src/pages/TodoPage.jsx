@@ -69,6 +69,7 @@ export default function TodoPage() {
                 <span className={todo.completed ? "completed" : ""}>
                   {todo.text}
                 </span>
+            
                 <button onClick={() => setEditing({ id: todo.id, text: todo.text })}>
                   Edit
                 </button>
@@ -77,7 +78,6 @@ export default function TodoPage() {
                 </button>
               </>
             )   
-
           }
           </li>
         ))}
